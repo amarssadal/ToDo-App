@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;500;900&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="main_grid.css">
+        <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+        
+        <title>ToDo App</title>
+    </head>
+    <body>
+        <div class="main">
+            
+            <div class="titleBox">
+                <div class="ionics"><ion-icon name="checkmark-done-outline"></ion-icon>TODO APP</div>
+            </div> 
+            
+            <div class = "inputBox">
+                <div class="date input">
+                    <input type="text" placeholder="Date" class="dateIn" />
+                </div>
+                <div class="month input">
+                    <select class="monthIn">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                    </select>
+                </div>
+                <div class="task input">
+                    <input type="text" placeholder="Task Description" class="descIn"/>
+                </div>
+                <div class="status input">
+                    <button class="addButton">Add</button>
+                </div>
+            </div>
+
+            <div class="headBox">
+                <div class="date head">
+                    <div class="headFix">Date</div>
+                </div>
+                <div class="month head">
+                    <div class="headFix">Month</div>
+                </div>
+                <div class="task head">
+                    <div class="headFix">Task</div>
+                </div>
+                <div class="status head">
+                    <div class="headFix">Status</div>
+                </div>
+            </div>
+            
+            <div class="listContainer">
+                <!-- <div class="listBox listItem_01 margin_maker">
+                    <div class="date list">12</div>
+                    <div class="month list">October</div>
+                    <div class="task list">Amarjeet Birthday</div>
+                    <div class="status list">
+                        <div class="incoText">Incomplete</div>
+                        <div class="compText">
+                            Complete
+                            <ion-label>
+                                <ion-icon name="checkmark-outline"></ion-icon>
+                            </ion-label>
+                        </div>
+                    </div>
+                </div>
+                -->
+            </div>
+            
+            <div class="footBox">
+            </div>
+            
+        </div>
+        <script src="main.js" defer></script>
+    </body>
+</html>

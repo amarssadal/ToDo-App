@@ -1,0 +1,224 @@
+/*** GENERAL *****************************/
+/*****************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #dbdbdb;
+    color: #ffffff;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+}
+
+
+/*** MAIN ********************************/
+/*****************************************/
+.main {
+    width: 80vw;
+    min-width: 350px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main>* {
+    margin: 10px 0 10px 0;
+}
+
+.main > :first-child {
+    margin-top: 5vh;
+}
+
+.main > :last-child {
+    margin-bottom: 5vh;
+}
+
+/*** STRUCTURE ***************************/
+/*****************************************/
+.titleBox {
+    font-family: 'Lato', sans-serif;
+    color: #dbdbdb;
+    width: 100%;
+    font-weight: 100;
+    letter-spacing: 1px;
+    background-color: #000000;
+    display: grid;
+    border-radius: 8px 8px 0 0;
+    padding: 8px 12px 8px 5px;
+}
+
+.inputBox {
+    width: 100%;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: minmax(60px, 7%) minmax(75px, 7%) minmax(100px, 76%) minmax(90px, 10%);
+    background-color: #cf7500;
+}
+
+.headBox {
+    width: 100%;
+    font-size: .9rem;
+    font-weight: 900;
+    background-color: #f0a500;
+    display: grid;
+    grid-template-columns: minmax(60px, 7%) minmax(75px, 7%) minmax(100px, 76%) minmax(90px, 10%);
+    letter-spacing: .05rem;
+}
+
+.listBox {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 100;
+    display: grid;
+    grid-template-columns: minmax(60px, 7%) minmax(75px, 7%) minmax(100px, 76%) minmax(90px, 10%);
+}
+
+.footBox {
+    font-family: 'Lato', sans-serif;
+    color: #dbdbdb;
+    width: 100%;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: #7d5a5a;
+    display: grid;
+    border-radius: 0 0 12px 12px;
+    padding: 8px 12px 12px 5px;
+}
+
+
+/*** TITLE BOX ***************************/
+/*****************************************/
+.titleBox {
+    font-size: 1.5rem;
+    width: 100%;
+    margin: 5vh 0 0;
+    font-weight: 900;
+}
+
+
+/*** INPUT BOX ***************************/
+/*****************************************/
+input[type=text],.addButton, select {
+    width: 100%;
+    padding: 8px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+}
+
+.input {
+    padding: 8px;
+}
+
+input[type=text]:focus, .addButton:focus, select:focus {
+    outline-color: teal;
+}
+
+
+/*** HEAD BOX ****************************/
+/*****************************************/
+.head {
+    min-width: 5%;
+    width: 100%;
+    padding: 8px;
+}
+
+
+/*** LIST BOX ****************************/
+/*****************************************/
+.list {
+    color: #131c00;
+    font-weight: 500;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.listBox:hover {
+    background-color: #cfc7bc;
+}
+
+.listBox .listContainer .status {
+    position: relative;
+}
+
+.listBox .status .incoText, .listBox .status .compText {
+    transition: .5s;
+}
+
+.listBox .status .incoText {
+    opacity: 1;
+    position: absolute;
+}
+
+.listBox .status .compText {
+    opacity: 0;
+}
+
+.listBox:hover .status .incoText{
+    transform: translateX(-5px);
+    opacity: 0;
+}
+
+.listBox:hover .status .compText{
+    transform: translateX(-5px);
+    opacity: 1;
+
+}
+
+.listbox .status .compText ionlabel {
+    display: grid;
+    align-items: center;
+}
+
+
+/*** SINGLES *****************************/
+/*****************************************/
+@media only screen and (max-width: 450px) {
+    
+    .headbox .date, .listBox .date {
+        grid-area: date;
+    }
+    
+    .headBox .month, .listBox .month {
+        grid-area: month;
+    }
+    
+    .headBox .task, .listBox .task {
+        grid-area: task;
+    }
+    
+    .headBox .status, .listBox .status {
+        grid-area: status;
+    }
+    
+    .headBox, .listBox, .listBox .date {
+        grid-template-areas: 
+            "date month status . ."
+            "task task task task task";
+        padding: 5px;
+    }
+    
+    .headBox, .listBox {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
+}
+
+
+
+
